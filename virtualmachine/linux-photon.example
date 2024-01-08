@@ -2,13 +2,13 @@
 apiVersion: vmoperator.vmware.com/v1alpha1
 kind: VirtualMachine
 metadata:
-  name: photon-vm
+  name: harbor-registry
   namespace: default
   annotations:
     vmoperator.vmware.com/image-supported-check: disable
 spec:
   className: guaranteed-small
-  imageName: packages.vmware.com/photon/4.0/GA/ova/photon-hw11-4.0-1526e30ba0.ova
+  imageName: ent.box.com/shared/static/q215yv1fpib244vumfwffqn7kb0cserl.ova
   powerState: poweredOn
   networkInterfaces:
   - networkName: "VM Network"
