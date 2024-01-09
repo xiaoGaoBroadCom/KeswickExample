@@ -33,3 +33,11 @@ spec:
       retries: -1
   test:
     enable: true
+  values:
+    edgex:
+      replicas:
+        mqttbroker: 1
+        devices:
+          mqtt: 1
+        appservice:
+          mqttexport: 1
