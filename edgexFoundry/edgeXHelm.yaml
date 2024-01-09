@@ -35,6 +35,8 @@ spec:
     enable: true
   values:
     edgex:
+      security:
+        enabled: true
       replicas:
         mqttbroker: 1
         device:
