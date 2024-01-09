@@ -37,7 +37,7 @@ spec:
     edgex:
       replicas:
         mqttbroker: 1
-        devices:
+        device:
           mqtt: 1
         appservice:
           mqttexport: 1
