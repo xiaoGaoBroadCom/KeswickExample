@@ -35,6 +35,8 @@ spec:
     enable: true
   values:
     edgex:
+      features:
+        messagebusbackend: mqtt
       replicas:
         mqttbroker: 1
         device:
