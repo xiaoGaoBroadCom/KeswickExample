@@ -34,5 +34,5 @@ data:
         shell: /bin/bash
     write_files:
       - content: |
-          Keswick VM service says Hello World
+          Windows File Server
         path: /helloworld
