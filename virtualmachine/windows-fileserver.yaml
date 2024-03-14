@@ -2,7 +2,7 @@
 apiVersion: vmoperator.vmware.com/v1alpha1
 kind: VirtualMachineClass
 metadata:
-  name: withusbcontroller
+  name: withwifi
 spec:
   hardware:
     cpus: 2
@@ -10,7 +10,7 @@ spec:
     devices:
       dynamicDirectPathIODevices:
       - vendorID: 0x8086
-        deviceID: 0x9a1d
+        deviceID: 0xa0f0
 apiVersion: vmoperator.vmware.com/v1alpha1
 kind: VirtualMachine
 metadata:
@@ -19,7 +19,7 @@ metadata:
   annotations:
     vmoperator.vmware.com/image-supported-check: disable
 spec:
-  className: withusbcontroller
+  className: withwifi
   imageName: ent.box.com/shared/static/5ffcrsuvhqxt5fmqn4shka1pvg9biylb.ova
   powerState: poweredOn
   networkInterfaces:
