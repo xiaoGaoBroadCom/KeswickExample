@@ -1,4 +1,16 @@
-#example deployment and post customsiation for Photon VM
+#example deployment and post customsiation for Windows VM
+apiVersion: vmoperator.vmware.com/v1alpha1
+kind: VirtualMachineClass
+metadata:
+  name: withusbcontroller
+spec:
+  hardware:
+    cpus: 2
+    memory: 8Gi
+    devices:
+      dynamicDirectPathIODevices:
+      - vendorID: 0x8086
+        deviceID: 0x9a1d
 apiVersion: vmoperator.vmware.com/v1alpha1
 kind: VirtualMachine
 metadata:
@@ -7,7 +19,7 @@ metadata:
   annotations:
     vmoperator.vmware.com/image-supported-check: disable
 spec:
-  className: guaranteed-small
+  className: withusbcontroller
   imageName: ent.box.com/shared/static/5ffcrsuvhqxt5fmqn4shka1pvg9biylb.ova
   powerState: poweredOn
   networkInterfaces:
