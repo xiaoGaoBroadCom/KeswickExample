@@ -14,7 +14,6 @@ items:
       kubesphere.io/namespace: node-feature-discovery
     name: node-feature-discovery
     resourceVersion: "14091852"
-    uid: 028d8773-5cb6-4fbc-a76b-7f56c81474af
   spec:
     finalizers:
     - kubernetes
@@ -31,7 +30,6 @@ items:
     generation: 1
     name: nodefeaturerules.nfd.k8s-sigs.io
     resourceVersion: "14091862"
-    uid: 4bd728f8-faeb-44fe-a5b6-2ef5c5fc6c7b
   spec:
     conversion:
       strategy: None
@@ -379,7 +377,6 @@ items:
     generation: 1
     name: nodefeatures.nfd.k8s-sigs.io
     resourceVersion: "14091864"
-    uid: a8c5bbee-24e2-4686-b78e-801983d518a4
   spec:
     conversion:
       strategy: None
@@ -515,7 +512,6 @@ items:
     name: nfd-gc
     namespace: node-feature-discovery
     resourceVersion: "14091863"
-    uid: 9db4318c-0722-4a90-8a40-7b6a495a730f
 - apiVersion: v1
   kind: ServiceAccount
   metadata:
@@ -526,7 +522,6 @@ items:
     name: nfd-master
     namespace: node-feature-discovery
     resourceVersion: "14091865"
-    uid: 13963c19-ba4c-4dc1-8e4d-15251c3d1042
 - apiVersion: v1
   kind: ServiceAccount
   metadata:
@@ -537,7 +532,6 @@ items:
     name: nfd-worker
     namespace: node-feature-discovery
     resourceVersion: "14091866"
-    uid: 1b31739b-67fd-4994-9b39-0b5345554f60
 - apiVersion: rbac.authorization.k8s.io/v1
   kind: Role
   metadata:
@@ -548,7 +542,6 @@ items:
     name: nfd-worker
     namespace: node-feature-discovery
     resourceVersion: "14091867"
-    uid: 3b004cba-d63c-475d-8cd6-4e7c291adcd7
   rules:
   - apiGroups:
     - nfd.k8s-sigs.io
@@ -567,7 +560,6 @@ items:
     creationTimestamp: "2024-03-21T12:34:51Z"
     name: nfd-gc
     resourceVersion: "14091868"
-    uid: 3f4ac23a-a5ec-4753-9fb5-0150dc9d5c45
   rules:
   - apiGroups:
     - ""
@@ -605,7 +597,6 @@ items:
     creationTimestamp: "2024-03-21T12:34:51Z"
     name: nfd-master
     resourceVersion: "14091869"
-    uid: efe82298-35fc-4332-96ec-005f5f91242c
   rules:
   - apiGroups:
     - ""
@@ -651,7 +642,6 @@ items:
     name: nfd-worker
     namespace: node-feature-discovery
     resourceVersion: "14091870"
-    uid: 07fac705-6a29-451e-be68-f5f3cc7d4a1b
   roleRef:
     apiGroup: rbac.authorization.k8s.io
     kind: Role
@@ -669,7 +659,6 @@ items:
     creationTimestamp: "2024-03-21T12:34:51Z"
     name: nfd-gc
     resourceVersion: "14091871"
-    uid: da121448-1ec8-4680-b80a-1dd2c8c2cc3d
   roleRef:
     apiGroup: rbac.authorization.k8s.io
     kind: ClusterRole
@@ -687,7 +676,6 @@ items:
     creationTimestamp: "2024-03-21T12:34:51Z"
     name: nfd-master
     resourceVersion: "14091874"
-    uid: 63907705-5e77-4b74-b7e9-f46b9cfac84a
   roleRef:
     apiGroup: rbac.authorization.k8s.io
     kind: ClusterRole
@@ -738,7 +726,6 @@ items:
     name: nfd-master-conf
     namespace: node-feature-discovery
     resourceVersion: "14091876"
-    uid: 319e93a7-3473-4747-a461-49691b02befc
 - apiVersion: v1
   data:
     nfd-worker.conf: |
@@ -991,7 +978,6 @@ items:
     name: nfd-worker-conf
     namespace: node-feature-discovery
     resourceVersion: "14091877"
-    uid: 14282665-ccef-43a7-8bae-adbac946d5e5
 - apiVersion: apps/v1
   kind: Deployment
   metadata:
@@ -1006,7 +992,6 @@ items:
     name: nfd-gc
     namespace: node-feature-discovery
     resourceVersion: "14092066"
-    uid: b38a88d8-64d5-49eb-9c31-b444318c860d
   spec:
     progressDeadlineSeconds: 600
     replicas: 1
@@ -1101,7 +1086,6 @@ items:
     name: nfd-master
     namespace: node-feature-discovery
     resourceVersion: "14092168"
-    uid: 925a531a-2faf-4dda-9a05-703b41dda3ca
   spec:
     progressDeadlineSeconds: 600
     replicas: 1
@@ -1251,7 +1235,6 @@ items:
     name: nfd-worker
     namespace: node-feature-discovery
     resourceVersion: "14092074"
-    uid: fe6a90cb-f31b-4a8e-b55e-56d426765127
   spec:
     revisionHistoryLimit: 10
     selector:
