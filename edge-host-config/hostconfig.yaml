@@ -9,6 +9,9 @@ spec:
   profile: |
     {
       "esx": {
+        "vmkernel": {
+          "vga": false
+        },
         "system": {
           "system_time": {
             "enabled": true,
