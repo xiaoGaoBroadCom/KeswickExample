@@ -16,8 +16,6 @@ spec:
   networkInterfaces:
   - networkName: "VM Network"
     ethernetCardType: "vmxnet3"
-  - networkName: "VM Network"
-    ethernetCardType: "e1000"
 ---
 apiVersion: v1
 kind: Secret
