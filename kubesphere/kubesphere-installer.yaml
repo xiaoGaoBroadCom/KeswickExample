@@ -39,7 +39,8 @@ kind: ServiceAccount
 metadata:
   name: ks-installer
   namespace: kubesphere-system
-
+imagePullSecrets:
+  - name: dockerhub-image-pull-secret
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
