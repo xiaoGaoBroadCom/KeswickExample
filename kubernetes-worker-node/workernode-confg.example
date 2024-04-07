@@ -28,6 +28,6 @@ metadata:
 spec:
   className: best-effort-keswick-small
   imageName: keswick-wrkr.ova
-  powerState: poweredOff
+  powerState: poweredOn
   vmMetadata:
     transport: CloudInit
