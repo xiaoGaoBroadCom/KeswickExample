@@ -9,7 +9,7 @@ metadata:
 spec:
   className: best-effort-medium
   imageName: ent.box.com/shared/static/q215yv1fpib244vumfwffqn7kb0cserl.ova
-  powerState: poweredOn
+  powerState: poweredOff
   networkInterfaces:
   - networkName: "VM Network"
     ethernetCardType: "vmxnet3"
