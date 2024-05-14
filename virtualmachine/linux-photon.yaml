@@ -30,7 +30,7 @@ data:
       - name: root
         sudo: ALL=(ALL) NOPASSWD:ALL
         lock_passwd: false
-        passwd: '$6$rounds=4096$g4hhnNzlgGol6ghX$E.Qu.vzMA.qzufAhwI84THkFSTjGCTognWAiSt8uioMKjKDUF1wPtIAiKaSyIaT/JuunlWk8pDetIgYLT81Nr0'
+        passwd: '$6$aUfGvnhsM$/LB29rASbTCwmMwVIdY8xr2GeMkNYQz8NjGkCPa5yUmahUvHWLTXtlS8SPc5tFz3YbcKlD0EX0e0/wgzo8Ryu/'
         shell: /bin/bash
     write_files:
       - content: |
