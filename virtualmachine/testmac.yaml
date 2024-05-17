@@ -1,0 +1,40 @@
+apiVersion: vmoperator.vmware.com/v1alpha1
+kind: VirtualMachine
+metadata:
+  name: mac-test
+  namespace: default
+  annotations:
+    vmoperator.vmware.com/image-supported-check: disable
+spec:
+  className: best-effort-medium
+  imageName: ent.box.com/shared/static/q215yv1fpib244vumfwffqn7kb0cserl.ova
+  powerState: poweredOn
+  networkInterfaces:
+  - networkName: "VM Network"
+    ethernetCardType: "vmxnet3"
+  vmMetadata:
+    configMapName: user-data-photon
+    transport: CloudInit
+  networkInterfaceStatus:
+  - macAddress: "00:50:56:8c:05:ef"
+    ipAddresses: 1.2.3.4
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: user-data-photon
+    namespace: default
+data:
+  user-data: |
+    #cloud-config
+    ssh_pwauth: true
+    users:
+      - name: root
+        sudo: ALL=(ALL) NOPASSWD:ALL
+        lock_passwd: false
+        passwd: '$6$aUfGvnhsM$/LB29rASbTCwmMwVIdY8xr2GeMkNYQz8NjGkCPa5yUmahUvHWLTXtlS8SPc5tFz3YbcKlD0EX0e0/wgzo8Ryu/'
+        shell: /bin/bash
+    write_files:
+      - content: |
+          Keswick VM service says Hello World
+        path: /helloworld
